@@ -55,11 +55,3 @@ module "blog_sg" {
   egress_rules = ["all-all"]
   egress_cidr_blocks = ["0.0.0.0/0"]
 }
-
-
-resource "aws_security_group" "blog" {
-  name = "blog"
-  description = "Allow Http and Https in. Allow everything out"
-
-  vpc_id = data.aws_vpc.default.id
-}
